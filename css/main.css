@@ -37,12 +37,12 @@
         border-radius: 0 10px 10px 0;
         background-image: url("../img/drawers.jpg");
     }
-    .left>h1 {
+    .right>h1 {
         padding: 10% 10% 0 10%;
         line-height: 1.2;
         font-size: 35px;
     }
-    .left>p {
+    .right>p {
         padding: 0 30% 5% 10%;
         line-height: 1.5;
         font-size: 16px;
