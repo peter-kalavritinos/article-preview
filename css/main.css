@@ -1,142 +1,213 @@
-@media screen and (min-width: 375px) {
-    body {
-        font-family: 'manrope', sans-serif;
-        background-color: #ecf2f8;
-        min-width: min-content;
-    }
-    .main {
-        display: flex;
-        flex-wrap: nowrap;
-        background-color: #fff;
-        max-width: max-content;
-        border-radius: 10px;
-        margin: 12% auto 12% auto;
-    }
-    .main>div {
-        height: 446px;
-        width: 540px;
-        background-color: #fffff;
-    }
-    .michelle {
-        display: flex;
-        flex-wrap: nowrap;
-        max-width: max-content;
-        border-radius: 10px;
-        margin: 0 10% 0 10%;
-    }
-    .michelle>div {
-        width: 100px;
-        margin: 0 20% 0 0;
-    }
-    .content {
-        color: black;
-        border-radius: 10px 0 0 10px;
-    }
-    .left {
-        opacity: .5;
-        border-radius: 0 10px 10px 0;
-        background-image: url("../img/drawers.jpg");
-    }
-    .right>h1 {
-        padding: 10% 10% 0 10%;
-        line-height: 1.2;
-        font-size: 35px;
-    }
-    .right>p {
-        padding: 0 30% 5% 10%;
-        line-height: 1.5;
-        font-size: 16px;
-        font-weight: 50;
-        color: rgb(207, 207, 207);
-    }
-    .michelle>div>h2 {
-        font-size: 35px;
-        margin: 0;
-        text-transform: uppercase;
-    }
-    .michelle>div>p {
-        font-size: 15px;
-        margin: 0;
-        text-transform: uppercase;
-        color: rgb(207, 207, 207);
-    }
-    .left .insights {
-        color: rgb(175, 103, 216);
+:root {
+    font-size: 62.5%;
+    font-family: "Manrope", sans-serif;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    height: 100vh;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    padding-top: 0;
+    background-color: #ecf2f8;
+}
+
+.article-preview {
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    max-width: 33rem;
+    background-color: #fff;
+    border-radius: 10px;
+}
+
+@media screen and (min-width: 80rem) {
+    .article-preview {
+        flex-direction: row;
+        max-width: 73rem;
     }
 }
 
-@media screen and (max-width: 1000px) {
-    body {
-        font-family: 'marope', sans-serif;
-        background-color: #040210;
-        min-width: 700px;
+.text {
+    padding: 3.5rem;
+    text-align: left;
+}
+
+@media screen and (min-width: 80rem) {
+    .text {
+        padding: 1.5rem 4rem 0.5rem;
     }
-    .main {
+}
+
+.text h1 {
+    color: #48556a;
+    font-size: 1.6rem;
+    line-height: 2.4rem;
+}
+
+@media screen and (min-width: 80rem) {
+    .text h1 {
+        font-size: 2rem;
+        line-height: 2.8rem;
+    }
+}
+
+.text p {
+    color: #6e8098;
+    font-size: 1.3rem;
+    font-weight: 200;
+    line-height: 2rem;
+}
+
+.hero-image {
+    background-image: url("../img/drawers.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    min-height: 20rem;
+    min-width: 28rem;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+@media screen and (min-width: 80rem) {
+    .hero-image {
+        border-bottom-left-radius: 10px;
+        border-top-right-radius: 0px;
+    }
+}
+
+.footer {
+    display: flex;
+    position: relative;
+    padding: 0 3rem 2rem;
+    justify-content: space-between;
+    align-items: center;
+}
+
+@media screen and (min-width: 80rem) {
+    .footer {
+        padding: 0 4rem 2.5rem;
+    }
+}
+
+.author-avatar img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+.author {
+    display: flex;
+    align-items: center;
+}
+
+.author-info {
+    font-size: 1.3rem;
+    color: #9daec2;
+    display: flex;
+    flex-direction: column;
+    margin-left: 1.5rem;
+}
+
+.author-name {
+    color: #48556a;
+    font-weight: 700;
+    line-height: 2rem;
+}
+
+.date {
+    font-weight: 200;
+    line-height: 2rem;
+}
+
+button {
+    width: 32px;
+    height: 32px;
+    border: none;
+    border-radius: 50%;
+    background-image: url("../img/icon-share.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.media-links.open {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 100;
+    padding: 0 3rem;
+    background-color: #48556a;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 75px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    opacity: 1;
+    visibility: visible;
+}
+
+@media screen and (min-width: 80rem) {
+    .media-links.open {
+        position: absolute;
         display: flex;
-        flex-wrap: wrap;
-        background-color: #430065;
-        max-width: max-content;
+        align-items: center;
+        justify-content: center;
+        z-index: 100;
+        padding: 0 2.5rem;
+        background-color: #48556a;
+        left: 540px;
+        bottom: 85px;
+        right: -78px;
+        height: 60px;
+        width: 220px;
         border-radius: 10px;
-        margin: 12% 5% 12% 5%;
-        text-align: center;
     }
-    .main>div {
-        height: max-content;
-        width: 100%;
-        background-color: #0f002b;
+    .media-links.open::after {
+        content: "";
+        width: 25px;
+        height: 25px;
+        transform: rotate(45deg);
+        background-color: #48556a;
+        position: absolute;
+        bottom: -10px;
     }
-    .main .right {
-        height: 446px;
+    .share-open {
+        display: none;
     }
-    .michelle {
-        display: block;
-        max-width: max-content;
-        border-radius: 10px;
-        margin: auto auto 15% auto;
+    .icons img {
+        width: 20px;
+        height: 20px;
     }
-    .michelle>div {
-        width: max-content;
-        margin: auto auto 50% auto;
-    }
-    .left {
-        order: 2;
-        color: rgb(238, 238, 238);
-        border-radius: 0 0 10px 10px;
-    }
-    .right {
-        height: 446px;
-        order: 1;
-        opacity: .5;
-        border-radius: 10px 10px 0 0;
-        background-image: url("../img/image-header-mobile.jpg");
-    }
-    .left>h1 {
-        padding: 5% 5% 0 5%;
-        line-height: 1.2;
-        font-size: 59px;
-        font-weight: 600;
-    }
-    .left>p {
-        padding: 0 10% 5% 10%;
-        line-height: 1.5;
-        font-size: 33px;
-        font-weight: 50;
-        color: rgb(207, 207, 207);
-    }
-    .michelle>div>h2 {
-        font-size: 59px;
-        font-weight: 600;
-        text-transform: uppercase;
-        margin: 0;
-    }
-    .michelle>div>p {
-        font-size: 33px;
-        font-weight: 50;
-        text-transform: uppercase;
-        color: rgb(207, 207, 207);
-        margin: 0;
-    }
-    .left .insights {
-        color: rgb(175, 103, 216);
-    }
+}
+
+.media-links {
+    display: none;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.5s ease;
+}
+
+.icons {
+    display: flex;
+    align-items: center;
+}
+
+.icons>*+* {
+    margin-left: 1.5rem;
+}
+
+.icons h3 {
+    color: #9daec2;
+    font-size: 1.3rem;
+    letter-spacing: 0.5rem;
+    font-weight: 400;
 }
